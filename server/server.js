@@ -10,10 +10,6 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-    credentials: true,
-    origin: ['http://localhost:3000', 'http://localhost:8080', 'http://localhost:4200', 'http://127.0.0.1:5501/client/src/'],
-}))
 
 //mongoose connection
 const dbURI = 'mongodb+srv://agbamajnr:brainbox@learn-node.tv0ge.mongodb.net/525?retryWrites=true&w=majority'
