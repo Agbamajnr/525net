@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>525net - A  network for all </title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body id="body">
+    <div class="container-fluid flex flex-col justify-between items-center">
+      <div class="details flex flex-row items-center justify-evenly">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mt-6 text-green-500 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+        </svg>
+        <div class="theme m-5">
+          <input type="checkbox" name="theme" id="theme"/>
+          <label for="theme" class="themeLabel"></label>
+        </div>
+      </div>
+      <div class="canvas">
+
+      </div>
+      <div class="toolbox flex flex-row justify-between items-center rounded">
+        <div class="flex mount flex-col items-center m-3 mb-2 cursor-pointer" rank="hr">
+          <img src="https://img.icons8.com/ios-glyphs/30/fa314a/online.png"/>
+          <span>Head Router</span>
+        </div>
+        <div class="flex mount flex-col items-center justify-center m-3 mb-3 cursor-pointer" rank="ap">
+          <img src="https://img.icons8.com/ios-glyphs/35/000000/hotspot.png"/>
+          <span>Access Point</span>
+        </div>
+        <div class="flex mount flex-col items-center justify-center m-3 mb-3 cursor-pointer" rank="bs">
+          <img src="https://img.icons8.com/ios/35/000000/wired-network.png"/>
+          <span>Base Station</span>
+        </div>
+        <div class="flex mount flex-col items-center justify-center m-3 mb-4 cursor-pointer" rank="rs">
+          <img src="https://img.icons8.com/external-flatart-icons-solid-flatarticons/35/000000/external-wifi-network-and-cloud-computing-flatart-icons-solid-flatarticons.png"/>
+          <span>Receiver Station</span>
+        </div>
+        <div class="flex mount flex-col items-center justify-center m-3 mr-3 cursor-pointer" rank="cl">
+          <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/30/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/>
+          <span>Client</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal Section -->
+
+<div class="bg-modal">
+	<div class="modal-contents">
+
+    <div class="close">+</div>
+
+      <form id="ipForm">
+        <input type="text" placeholder="Name" id="ipName" required>
+			  <input type="text" placeholder="Ip Address" id="ipAddress" required>
+      </form>
+			<button id="submitIp"><p>Add +</p></button>
+
+	</div>
+</div>
+
+    <script src="./js/canvas.js" defer></script>
+    <script src="./js/index.js"></script>
+
+
+    <!-- Development -->
+    <script src="./js/lib/popper.min.js" defer></script>
+    <script src="./js/lib/tippy-bundle.umd.js" defer></script>
+    <script src="./js/lib/axios.min.js"></script>
+
+
+</body>
+</html>

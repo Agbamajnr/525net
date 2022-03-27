@@ -18,16 +18,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
     console.log('logged');
    })
    .catch((err) => console.log(err));
-
+   
 
 app.use('/api/network', apiRoutes);
 
 app.listen(process.env.PORT || 3000), () => {
     console.log('app listening on port');
 }
-
-
-
 
 
 
